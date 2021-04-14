@@ -1,0 +1,65 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link rel = "stylesheet" href = "oldtimeyconversionsStyle.css">
+
+<script>
+
+//--------------------------------------------------------------------------
+function milestofurlongs()
+{
+var start = parseInt(document.getElementById('startval').value);
+var end = parseInt(document.getElementById('endval').value);
+var string = "Miles to Furlongs";
+
+for (i = start; i <= end; i++)
+{
+  var converted = i*8;
+  string = string + "<br>" + i + " - " + converted + "<br>";
+}
+document.getElementById('result').innerHTML = string;
+}
+//--------------------------------------------------------------------------
+function slugstopounds()
+{
+ var string = "Slugs to Pounds";
+ var start = parseInt(document.getElementById('startval').value);
+ var end = parseInt(document.getElementById('endval').value);
+ for (i = start; i <= end; i++)
+ {
+   var converted = i*32.174;
+   string = string + "<br>" + i + " - " + converted + "<br>";
+ }
+ document.getElementById('result').innerHTML = string;
+}
+//--------------------------------------------------------------------------
+function fortnightstodays()
+{
+  var string = "Fortnights to Days";
+  var start = parseInt(document.getElementById('startval').value);
+  var end = parseInt(document.getElementById('endval').value);
+  for (i = start; i <= end; i++)
+  {
+    var converted = i*14;
+    string = string + "<br>" + i + " - " + converted + "<br>";
+  }
+  document.getElementById('result').innerHTML = string;
+
+}
+//--------------------------------------------------------------------------
+</script>
+</head>
+<body>
+<h1>Old Timey Conversions</h1>
+<input type = "text" id = "startval" placeholder = "Start Value">
+<input type = "text" id = "endval" placeholder = "End Value">
+<br><br>
+<input type = "button" onclick = "milestofurlongs()" value = "Miles to Furlongs" id = "buttons">
+<input type = "button" onclick = "slugstopounds()" value = "Slugs to Pounds" id = "buttons">
+<input type = "button" onclick = "fortnightstodays()" value = "Fortnights to Days" id = "buttons">
+<br><hr><br>
+<p id = "result"></p>
+
+</body>
+</html>
